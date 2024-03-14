@@ -23,8 +23,15 @@
         // Получаем значение параметра "message" из URL
         var message = getParameterByName('message');
 
-        // Выводим приветственное сообщение
-        document.write('Hello ' + name + '! ' + message);
+       
+        if (!name) {
+            document.write('Параметр name не указан.');
+        } else if (!message) {
+            document.write('Параметр message не указан.');
+        } else {
+            // Выводим приветственное сообщение
+            document.write('Hello ' + name + '! ' + message);
+        }
     </script>
 </body>
 </html>
